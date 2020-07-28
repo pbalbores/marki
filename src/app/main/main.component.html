@@ -1,0 +1,76 @@
+<div class="container-fluid" style="background-color:#bdc3c7; height:500px;">
+    <div class="row">
+        <div class="col-md-3">
+            <div>
+                <div>
+                    <h2>DATOS DA COMPRA</h2>
+                </div>
+                <form (ngForm)="submitEvento" #submitEvento="ngForm" (ngSubmit)="calcularenServicio()">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Introduce o prezo de compra sen IVE</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Prezo de compra sen IVE" [(ngModel)]="precioCompra" name="precioCompra">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Introduce o IVE que se aplicará</label>
+                        <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]=" ivaCompra"
+                            name="ivaCompra">
+                            <option>4</option>
+                            <option>10</option>
+                            <option>21</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Aplicase Recargo de Equivalencia?</label>
+                        <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]=" recargo"
+                            name="ivaCompra">
+                            <option>SI</option>
+                            <option>NON</option>
+
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Calcular</button>
+                </form>
+            </div>
+
+            <div>
+                <div class="alert alert-primary" role="alert">
+                    O prezo total do produto é <br>
+                    <h1> {{precioTotalCompra|number}}€</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="alert alert-primary" role="alert">
+                <h1>Beneficio</h1>
+                <tr>
+                    <td style="padding-left:25px;"><b>PORCENTAXE</b></td>
+
+                    <td style="padding-left: 25px;">PREZO VENDA NETO</td>
+
+                    <td style="padding-left: 25px;">IVE APLICADO</td>
+
+                    <td style="padding-left: 25px;">IVE</td>
+
+                    <td style="padding-left: 25px;"><b>PVP</b></td>
+
+                    <td style="padding-left: 25px;">BENEFICIO</td>
+
+                </tr>
+
+                <tr *ngFor="let dato of datos">
+
+                    <td style="padding-left:25px;"><b>{{dato.porcentaje|number}}</b></td>
+                    <td style="padding-left:25px;">{{dato.precioVentaNeto|number}}</td>
+                    <td style="padding-left:25px;">{{dato.IVA|number}}</td>
+                    <td style="padding-left:25px;">{{dato.IvaCant|number}}</td>
+                    <td style="padding-left:25px;"><b>{{dato.PVP|number}}</b></td>
+                    <td style="padding-left:25px;">{{dato.Beneficio|number}}</td>
+                </tr>
+
+
+            </div>
+        </div>
+    </div>

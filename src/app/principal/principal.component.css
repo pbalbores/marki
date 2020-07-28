@@ -1,0 +1,33 @@
+.aboveContainer {
+  background-image: url(../../assets/images/background01.png)
+}
+
+.centerContainer {
+  padding: 50px;
+  text-align: left;
+}
+
+.bottonContainer {
+  padding: 50px;
+  background-color: #ff1493;
+}
+
+.title1 {
+  color: #ffff;
+  text-align: center;
+}
+
+.bigButton {
+  color: #ffff;
+  margin-top: 20px;
+}
+
+.raia {
+  background-color: #ff1493;
+  width: 100px;
+}
+
+.raia2 {
+  background-color: #ffff;
+  width: 100px;
+}
