@@ -1,0 +1,20 @@
+.aboveContainer {
+  background-image: url(../../assets/images/background01.png)
+}
+
+.title1 {
+  color: #ffff;
+  text-align: center;
+}
+
+.prezoTotal {
+  background-color: #ff1493;
+  color: #ffff;
+  text-align: center;
+}
+
+.botonCalcular {
+  background-color: #ff1493;
+  color: #ffff;
+
+}

@@ -5,6 +5,7 @@ import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
+  { path: "", component: PrincipalComponent },
 
   { path: "index", component: PrincipalComponent },
   { path: "app", component: MainComponent }
